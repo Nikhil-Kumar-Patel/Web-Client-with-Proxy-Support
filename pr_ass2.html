@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programming Assignment WWW</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Times New Roman, sans-serif;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: red;
+            font-size: 48px;
+            text-decoration: underline;
+        }
+
+        img {
+            width: 30%;
+            height: 10%;
+        }
+
+        p {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 36px;
+            opacity: 0; /* Initially hide the elements */
+            transition: opacity 1s;
+        }
+        a{
+        font-style: italic;
+            font-weight: bold;
+            font-size: 40px;
+        opacity:0;
+        transition: opacity 10s;
+        }
+    </style>
+</head>
+<body>
+    <img src="iith_logo.png" alt="IITH">
+    <h1>Programming Assignment WWW</h1>
+    <h1>Batch-</h1></br>
+    <p></p>
+    <p>Nikhil Patel</p>
+    <p>Saikumar Patnla</p>
+    <p>Noundla Srividya</p>
+    <a href="ACN report.pdf">Open Report</a>
+    <script>
+        const items = document.querySelectorAll('p,a');
+       let currentIndex = 0;
+
+        function displayItem() {
+            if (currentIndex < items.length) {
+                items[currentIndex].style.opacity = 1;
+                currentIndex++;
+                if (currentIndex < items.length) {
+                    setTimeout(displayItem, 1000); // Adjust the delay (in milliseconds) between items
+                }
+            }
+        }
+
+        displayItem();
+       </script>
+</body>
+</html>
+
